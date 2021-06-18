@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="leaflet/leaflet.css">
+    <link rel="stylesheet" href="css/index2.css">
+    <link rel="stylesheet" href="css/qrcode.css">
+    <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="cont col-12">
+        <div id="field1" class="field col-1">
+            <ul type="none" class="menu">
+                <li id="map">
+                    <i class="far fa-road"></i>
+                </li>
+                <li class="active" id="agenda">
+                    <i class="far fa-calendar-check"></i>
+                </li>
+                <li id="chat">
+                    <i class="far fa-comment-dots"></i>
+                </li>
+                <li id="alert">
+                    <i class="far fa-exclamation-triangle"></i>
+                </li>
+                <li id="qrcode">
+                    <i class="far fa-qrcode"></i>
+                </li>
+            </ul>
+        </div>
+
+        <div id="field2" class="field col-3">
+
+            <section id="sec1" class="display">
+                <h1>Tasks</h1>
+                <br>
+                <div class="taskscont">
+                    <div style="opacity: 0.6;" class="task">
+                        <span class="time">10:15pm</span><span
+                            class="rounded-pill state badge bg-success">Delivered</span>
+
+                        <hr style=margin-top:2%;margin-bottom:4%">
+                        <p class="info"><i class="far fa-map-marker-alt"></i>Sfax, Dar ahmed</p>
+                        <p class="info"><i class="far fa-ruler"></i><b>Distance:</b> 220Km</p>
+                        <p class="info"><i class="far fa-truck"></i><b>Vehicule:</b> 123tun4567</p>
+                    </div>
+                    <br>
+                    <div class="task">
+                        <span class="time">10:15pm</span><span class="rounded-pill state badge bg-danger">Panne</span>
+                        <hr style="margin-top:2%;margin-bottom:4%">
+                        <p class="info"><i class="far fa-map-marker-alt"></i>Sfax, Dar ahmed</p>
+                        <p class="info"><i class="far fa-ruler"></i><b>Distance:</b> 220Km</p>
+                        <p class="info"><i class="far fa-truck"></i><b>Vehicule:</b> 123tun4567</p>
+                    </div>
+                    <br>
+                    <div class="task">
+                        <span class="time">10:15pm</span><span class="rounded-pill state badge bg-warning text-dark">In
+                            Progress</span>
+                        <hr style="margin-top:2%;margin-bottom:4%">
+                        <p class="info"><i class="far fa-map-marker-alt"></i>Sfax, Dar ahmed</p>
+                        <p class="info"><i class="far fa-ruler"></i><b>Distance:</b> 220Km</p>
+                        <p class="info"><i class="far fa-truck"></i><b>Vehicule:</b> 123tun4567</p>
+                    </div>
+                    <br>
+                    <div class="task">
+                        <span class="time">10:15pm</span><span class="rounded-pill state badge bg-info ">Next</span>
+                        <hr style="margin-top:2%;margin-bottom:4%">
+                        <p class="info"><i class="far fa-map-marker-alt"></i>Sfax, Dar ahmed</p>
+                        <p class="info"><i class="far fa-ruler"></i><b>Distance:</b> 220Km</p>
+                        <p class="info"><i class="far fa-truck"></i><b>Vehicule:</b> 123tun4567</p>
+                    </div>
+                    <br>
+                    <div class="task">
+                        <span class="time">10:15pm</span>
+                        <hr style="margin-top:2%;margin-bottom:4%">
+                        <p class="info"><i class="far fa-map-marker-alt"></i>Sfax, Dar ahmed</p>
+                        <p class="info"><i class="far fa-ruler"></i><b>Distance:</b> 220Km</p>
+                        <p class="info"><i class="far fa-truck"></i><b>Vehicule:</b> 123tun4567</p>
+                    </div>
+                    <br>
+                    <div class="task">
+                        <span class="time">10:15pm</span>
+                        <hr style="margin-top:2%;margin-bottom:4%">
+                        <p class="info"><i class="far fa-map-marker-alt"></i>Sfax, Dar ahmed</p>
+                        <p class="info"><i class="far fa-ruler"></i><b>Distance:</b> 220Km</p>
+                        <p class="info"><i class="far fa-truck"></i><b>Vehicule:</b> 123tun4567</p>
+                    </div>
+                    <br>
+                    <div class="task">
+                        <span class="time">10:15pm</span>
+                        <hr style="margin-top:2%;margin-bottom:4%">
+                        <p class="info"><i class="far fa-map-marker-alt"></i>Sfax, Dar ahmed</p>
+                        <p class="info"><i class="far fa-ruler"></i><b>Distance:</b> 220Km</p>
+                        <p class="info"><i class="far fa-truck"></i><b>Vehicule:</b> 123tun4567</p>
+                    </div>
+                    <br>
+
+
+                </div>
+            </section>
+
+            <section id="sec2" class="hidden">
+                <h1>Chat</h1>
+                <br>
+                <div class="chatContainer">
+                    <div class=" row adminMsg">
+                        <b>Admin</b>
+                        <span>Hey noobs! <span class="msgDate">11:45pm</span> </span>
+                    </div><br>
+                    <div class=" row  sentMsg ">
+                        <span>okay iojuiuy tyrtyyuiuytrewrrtyu9ytrestdrytuyiui <span class="msgDate">11:45pm</span> </span>
+                    </div><br>
+                    <div class=" row recievedMsg">
+                        <b>User123</b><br>
+                        <span>Omw  <span class="msgDate">11:45pm</span> </span>
+                    </div><br>
+                    <div class=" row  sentMsg ">
+                        <span>okay iojuiuy tyrtyyuiuyt rewrrtyu9ytres tdrytuyiui <span class="msgDate">11:45pm</span> </span>
+                    </div><br>
+                    <div class=" row adminMsg">
+                        <b>Admin</b>
+                        <span>Hey noobs!  <span class="msgDate">11:45pm</span> </span>
+                    </div><br>
+                    <div class=" row  sentMsg ">
+                        <span>okay iojuiuy tyrtyyuiuyt rewrrtyu9ytres tdrytuyiui <span class="msgDate">11:45pm</span> </span>
+                    </div><br>
+                    <div class=" row  sentMsg ">
+                        <span>okay iojuiuy tyrtyyuiuyt rewrrtyu9ytres tdrytuyiui <span class="msgDate">11:45pm</span> </span>
+                    </div><br>
+                </div>
+                <div class="texting">
+                    <textarea placeholder="Type your text here" class="msg"></textarea>
+                    <i id="camera" class="media fa fa-camera"> </i>
+                    <i id="vocal" class="media fa fa-microphone"> </i>
+                </div>
+            </section>
+
+            <section id="sec3" class="hidden">
+                <h1>Alert</h1>
+                <br>
+                <p>Choose an alert to signal on your current position.</p>
+
+                <div class="alertContainer">
+                    <div id="breakdown" class="col-12 issue unselected"
+                        style=" background-image: linear-gradient(to bottom left , #e88ff5,#6b88f6);">
+                        <i class="fa fa-wrench"></i>
+                        <span class="alertTilte">Breakdown</span>
+                    </div>
+                    <br>
+                    <div id="accident" class="col-12 issue unselected"
+                        style=" background-image: linear-gradient(to bottom left , #91f2e8,#5c95f7);">
+                        <i class="fa fa-car-crash "></i>
+                        <span class="alertTilte">Accident</span>
+                    </div><br>
+                    <div id="jam" class="col-12 issue unselected"
+                        style=" background-image: linear-gradient(to bottom left , #f7cba8,#ec86da);">
+                        <i class="fa fa-car "></i><i class="fa fa-car "></i>
+                        <span class="alertTilte">Jam</span>
+                    </div>
+                    <br>
+                    <div id="roadwork" class="col-12 issue unselected"
+                        style=" background-image: linear-gradient(to bottom left , #f69395,#f7c276);">
+                        <i class="fa fa-snowplow "></i>
+                        <span class="alertTilte">Roadwork</span>
+                    </div><br>
+                    <div id="danger" class="col-12 issue unselected"
+                        style=" background-image: linear-gradient(to bottom left , #29c7e4,#bad162);">
+                        <i class="fa fa-exclamation-circle "></i>
+                        <span class="alertTilte">Danger</span>
+                    </div>
+
+
+                </div>
+                <br><br>
+                <form>
+                    <input type="hidden" id="selectedAlert">
+                    <center><input class="choose" type="submit" value="OK"></center>
+                </form>
+            </section>
+
+            <section id="sec4" class="hidden">
+                <div id="qrContainer">
+                    <br><br><br><br><br>
+                  <center>
+                        <h1>QR Code Scanner</h1>
+                        <a id="btn-scan-qr">
+                        <img src="data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGc+PHBhdGggZD0ibTQzMSAxMjEuNzh2MjY2LjQ0YzAgMjMuMDQtMTguNzQgNDEuNzgtNDEuNzggNDEuNzhoLTI2Ni40NGMtMjMuMDQgMC00MS43OC0xOC43NC00MS43OC00MS43OHYtMjY2LjQ0YzAtMjMuMDQgMTguNzQtNDEuNzggNDEuNzgtNDEuNzhoMjY2LjQ0YzIzLjA0IDAgNDEuNzggMTguNzQgNDEuNzggNDEuNzh6IiBmaWxsPSIjZWNmOWZkIi8+PHBhdGggZD0ibTQzMSAxMjEuNzh2MjY2LjQ0YzAgMjMuMDQtMTguNzQgNDEuNzgtNDEuNzggNDEuNzhoLTEzMy4yMnYtMzUwaDEzMy4yMmMyMy4wNCAwIDQxLjc4IDE4Ljc0IDQxLjc4IDQxLjc4eiIgZmlsbD0iI2Q5ZjNmYyIvPjxwYXRoIGQ9Im00OTYgMjcxaC00ODBjLTE5Ljg0NCAwLTE5Ljg1LTMwIDAtMzBoNDgwYzE5Ljg0NCAwIDE5Ljg1IDMwIDAgMzB6IiBmaWxsPSIjNThiMzU0Ii8+PHBhdGggZD0ibTQ5NiAyNzFoLTI0MHYtMzBoMjQwYzE5Ljg0NCAwIDE5Ljg1IDMwIDAgMzB6IiBmaWxsPSIjMDBhOTYzIi8+PHBhdGggZD0ibTQ4MiAxMjd2LTcxLjY1OWMwLTEzLjk3My0xMS4zNjgtMjUuMzQxLTI1LjM0LTI1LjM0MWgtNzEuNjZjLTE5LjgzMiAwLTE5Ljg2LTMwIDAtMzBoNzEuNjZjMzAuNTE0IDAgNTUuMzQgMjQuODI2IDU1LjM0IDU1LjM0MXY3MS42NTljMCAxOS44MzItMzAgMTkuODYtMzAgMHoiIGZpbGw9IiMwMDE3MzciLz48cGF0aCBkPSJtNDU2LjY2IDUxMmgtNzEuNjZjLTE5LjgzMiAwLTE5Ljg2LTMwIDAtMzBoNzEuNjZjMTMuOTczIDAgMjUuMzQtMTEuMzY4IDI1LjM0LTI1LjM0MXYtNzEuNjU5YzAtMTkuODMyIDMwLTE5Ljg2IDMwIDB2NzEuNjU5YzAgMzAuNTE1LTI0LjgyNiA1NS4zNDEtNTUuMzQgNTUuMzQxeiIgZmlsbD0iIzAwMTczNyIvPjxwYXRoIGQ9Im0wIDEyN3YtNzEuNjU5YzAtMzAuNTE1IDI0LjgyNi01NS4zNDEgNTUuMzQtNTUuMzQxaDcxLjY2YzE5LjgzMiAwIDE5Ljg2IDMwIDAgMzBoLTcxLjY2Yy0xMy45NzIgMC0yNS4zNCAxMS4zNjgtMjUuMzQgMjUuMzQxdjcxLjY1OWMwIDE5LjgzMi0zMCAxOS44Ni0zMCAweiIgZmlsbD0iIzAwMzU3YiIvPjxwYXRoIGQ9Im0xMjcgNTEyaC03MS42NmMtMzAuNTE0IDAtNTUuMzQtMjQuODI2LTU1LjM0LTU1LjM0MXYtNzEuNjU5YzAtMTkuODMyIDMwLTE5Ljg2IDMwIDB2NzEuNjU5YzAgMTMuOTczIDExLjM2OCAyNS4zNDEgMjUuMzQgMjUuMzQxaDcxLjY2YzE5LjgzMiAwIDE5Ljg2IDMwIDAgMzB6IiBmaWxsPSIjMDAzNTdiIi8+PHBhdGggZD0ibTM4OS4yMTggNDMwaC00Ny41NzVjLTE5LjgzMiAwLTE5Ljg2LTMwIDAtMzBoNDcuNTc1YzYuNDk3IDAgMTEuNzgyLTUuMjg1IDExLjc4Mi0xMS43ODJ2LTQ3LjU3NGMwLTE5LjgzMiAzMC0xOS44NiAzMCAwdjQ3LjU3NGMwIDIzLjAzOS0xOC43NDQgNDEuNzgyLTQxLjc4MiA0MS43ODJ6IiBmaWxsPSIjMDAxNzM3Ii8+PHBhdGggZD0ibTQwMSAxNjkuMzU2di00Ny41NzRjMC02LjQ5Ny01LjI4Ni0xMS43ODItMTEuNzgyLTExLjc4MmgtNDcuNTc1Yy0xOS44MzIgMC0xOS44Ni0zMCAwLTMwaDQ3LjU3NWMyMy4wMzggMCA0MS43ODIgMTguNzQzIDQxLjc4MiA0MS43ODJ2NDcuNTc0YzAgMTkuODMyLTMwIDE5Ljg2LTMwIDB6IiBmaWxsPSIjMDAxNzM3Ii8+PGcgZmlsbD0iIzAwMzU3YiI+PHBhdGggZD0ibTgxIDE2OS4zNTZ2LTQ3LjU3NGMwLTIzLjAzOSAxOC43NDQtNDEuNzgyIDQxLjc4Mi00MS43ODJoNDcuNTc1YzE5LjgzMiAwIDE5Ljg2IDMwIDAgMzBoLTQ3LjU3NWMtNi40OTcgMC0xMS43ODIgNS4yODUtMTEuNzgyIDExLjc4MnY0Ny41NzRjMCAxOS44MzItMzAgMTkuODYtMzAgMHoiLz48cGF0aCBkPSJtMTcwLjM1NyA0MzBoLTQ3LjU3NWMtMjMuMDM4IDAtNDEuNzgyLTE4Ljc0My00MS43ODItNDEuNzgydi00Ny41NzRjMC0xOS44MzIgMzAtMTkuODYgMzAgMHY0Ny41NzRjMCA2LjQ5NyA1LjI4NiAxMS43ODIgMTEuNzgyIDExLjc4Mmg0Ny41NzVjMTkuODMyIDAgMTkuODYgMzAgMCAzMHoiLz48L2c+PC9nPjwvc3ZnPg==" />
+                        </a><br>
+                        <p style="font-size:18px ; ">Tap to start scanning !</p>
+                
+                        <canvas hidden="" id="qr-canvas"></canvas>
+                
+                        <div id="qr-result" hidden="">
+                        <b>Data:</b> <span id="outputData"></span>
+                        </div>
+                   </center>
+                  </div>
+            </section>
+
+        </div>
+        <div class="field col-8" id="kharita">
+
+        </div>
+
+
+    </div>
+
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/menu/menu.js"></script>
+<script src="js/alert/alert.js"></script>
+<script src="js/qrcode/qrCodeScanner.js"></script>
+<script src="leaflet/leaflet.js"></script>
+<script src="js/index.js"></script>
+
+
+
+</html>
